@@ -38,9 +38,8 @@
 [commit]
   template = ~/.gitmessage
 [user]
-  name = Francesco Renzi
-  email = rentziass@gmail.com
-	signingkey = C811A302DD7BBBDA
+	name = Shan Gardezi
+	email = shangardezi@gmail.com
 [github]
   user = rentziass
 [credential]
