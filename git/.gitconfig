@@ -5,26 +5,8 @@
 [color]
   ui = auto
 [alias]
-  aa = add --all
-  ap = add --patch
-  b = branch
-  browse = !hub browse
-  cm = commit -m
-  ca = commit --amend
-  ci = commit -v
+  ci = commit
   co = checkout
-  compare = !hub compare
-  issues = !hub browse -- issues
-  sla = log --oneline --decorate --graph --all -40
-  unstage = reset
-  uncommit = reset --soft HEAD^
-  mup = !git checkout master && git pull && git checkout -
-  cop = checkout -
-  fall = "!for remote in $(git remote); do echo "Fetching $remote"; git fetch "$remote"; done"
-  upstream = rev-parse --abbrev-ref --symbolic-full-name @{upstream}
-  ureset = !git upstream && git reset --hard $(git upstream)
-  pr = !hub pull-request
-  draft = !hub pull-request --draft
 [core]
   editor = nvim
   excludesfile = ~/.gitignore
@@ -41,14 +23,12 @@
 	name = Shan Gardezi
 	email = shangardezi@gmail.com
 [github]
-  user = rentziass
+  user = shangardezi
 [credential]
 	helper = osxkeychain
-[ghi]
-	token = !security find-internet-password -a rentziass -s github.com -l 'ghi token' -w
 [http]
 	postBuffer = 1048576000
-	cookiefile = /Users/francescorenzi/.gitcookies
+	cookiefile = /Users/shan/.gitcookies
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [filter "strongbox"]
