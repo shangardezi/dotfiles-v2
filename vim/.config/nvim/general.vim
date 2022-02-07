@@ -1,6 +1,6 @@
 map <Space> <leader>
 map <Leader>s :update<CR>
-map <Leader>q :qall<CR>
+map <Leader>q :quit<CR>
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup

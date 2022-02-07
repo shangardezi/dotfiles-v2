@@ -45,16 +45,16 @@ export PATH=".git/safe/../../bin:$PATH"
 # graphviz
 # export PATH="/usr/local/Cellar/graphviz/2.38.0/bin:$PATH"
 
+# functions
+for function in $MY_DOTFILES_PATH/zsh/functions/*; do
+  source $function
+done
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # env vars
 source ~/.env
-
-# functions
-for function in $MY_DOTFILES_PATH/zsh/functions/*; do
-  source $function
-done
 
 bindkey -s "^F" "tmux-sessionizer\n"
 bindkey -s "^T" "dotfiles\n"
@@ -214,4 +214,3 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(starship init zsh)"
