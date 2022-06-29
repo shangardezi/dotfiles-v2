@@ -3,8 +3,6 @@ if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
   source "$HOME/.zprezto/init.zsh"
 fi
 
-eval "$(starship init zsh)"
-
 # history settings
 setopt appendhistory histignoredups
 setopt histignorespace extended_history
@@ -64,6 +62,14 @@ if (( $+commands[boot2docker] )) ; then
   $(boot2docker shellinit 2>/dev/null)
 fi
 
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)
+
 export PGDATA=/usr/local/var/postgres
 function gitdep () {
     git add . && git commit -m "$@" && git push
@@ -110,13 +116,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git git-flow osx pow rails bundler sublime web-search zeus)
 #
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -213,4 +214,5 @@ alias watch='watch '
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 
+eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

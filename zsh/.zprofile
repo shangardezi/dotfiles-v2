@@ -88,3 +88,4 @@ export PATH=$PATH":$GOPATH/bin"
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.fastlane/bin:$PATH"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
